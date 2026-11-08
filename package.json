@@ -1,0 +1,19 @@
+{
+  "name": "pf03-practica-integracion-continua",
+  "version": "1.0.0",
+  "description": "PF03 - Actividad 1 - PI2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "vitest": "^5.1.0"
+  },
+  "dependencies": {
+    "chalk": "^6.0.1"
+  }
+}

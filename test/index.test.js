@@ -29,14 +29,16 @@ describe('Funciones para practicar', () => {
             ['123H', false], //Solo dígitos 0-9
             ['1111', false], //Debe prohibirse que todos los dígitos sean iguales
             ['444444', false],
-        ])('Pin introducido no válido %i devuelve --> false', (pin, expected) =>{
+        ])('Pin introducido no válido %s devuelve --> false', (pin, expected) =>{
             expect(esPinValido(pin)).toStrictEqual(expected)
         });
         it.each([
             ['1234', true],
             ['123456', true],
-        ])('Pin introducido válido %i devuelve --> true', (pin, expected) =>{
+        ])('Pin introducido válido %s devuelve --> true', (pin, expected) =>{
             expect(esPinValido(pin)).toStrictEqual(expected)
         });
     })
 })
+
+//isgrpa2526

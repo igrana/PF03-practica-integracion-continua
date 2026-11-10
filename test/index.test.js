@@ -10,10 +10,10 @@ describe('Funciones para practicar', () => {
         [5, 5],
         [7, 13],
     ])('Secuencia de Fibonacci con índice %i -> %i', (n, expected) =>{
-        expect(fibonacci(n)).toBe(5)
-    })
+        expect(fibonacci(n)).toBe(expected)
+    });
 
     it('Lanza RangeError cuando el índice es < 0', () => {
         expect(() => fibonacci(-1)).toThrow(RangeError)
-    })
+    });
 })

@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest'
 import { fibonacci } from '../src/index.js'
 
 describe('Funciones para practicar', () => {
-    it.for([
+    it.each([
         [0, 0],
         [1, 1],
         [2, 1],

@@ -10,7 +10,7 @@
     return fibonacci(n-1) + fibonacci(n-2);
 }
 
-let esPinValido = function() {
+let esPinValido = function(pin) {
 
 }
 

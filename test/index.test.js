@@ -25,14 +25,18 @@ describe('Funciones para practicar', () => {
             [undefined, false], //No puede ser undefined
             ['', false], //No puede estar vacío
             ['123', false], //Debe tener 4 o 6 dígitos
-            ['1234', true],
             ['12345', false],
-            ['123456', true],
             ['123H', false], //Solo dígitos 0-9
             ['1111', false], //Debe prohibirse que todos los dígitos sean iguales
             ['444444', false],
-        ])('Pin introducido %i devuelve -> %i', (pin, expected) =>{
-            expect(esPinValido(pin)).toBe(expected)
+        ])('Pin introducido no válido %i devuelve --> false', (pin, expected) =>{
+            expect(esPinValido(pin)).toStrictEqual(expected)
+        });
+        it.each([
+            ['1234', true],
+            ['123456', true],
+        ])('Pin introducido válido %i devuelve --> true', (pin, expected) =>{
+            expect(esPinValido(pin)).toStrictEqual(expected)
         });
     })
 })

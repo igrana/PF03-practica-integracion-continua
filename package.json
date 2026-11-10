@@ -16,5 +16,16 @@
   },
   "dependencies": {
     "chalk": "^6.0.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igrana/PF03-practica-integracion-continua.git"
+  },
+  "bugs": {
+    "url": "https://github.com/igrana/PF03-practica-integracion-continua/issues"
+  },
+  "homepage": "https://github.com/igrana/PF03-practica-integracion-continua#readme"
 }

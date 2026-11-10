@@ -11,47 +11,20 @@
 }
 
 let esPinValido = function(pin) {
-    if (pin === null || pin === undefined || pin === '')
-        return false;
-    if (pin.length !== 4 && pin.length !== 6)
-        return false;
-    if (!esDeNumeros(pin))
-        return false;
-    if (sonDigitosIguales(pin))
-        return false;
+    //Evita null y undefined
+    if (typeof pin !== 'string') return false;
+    if (![4, 6].includes(pin.length)) return false;
+    if (!esDeNumeros(pin)) return false;
+    if (sonDigitosIguales(pin)) return false;
     return true;
 }
 
 let esDeNumeros = function(cadena) {
-    cadena = cadena.split('');
-    let esNumero = true;
-
-    cadena.forEach ((elemento) => {
-        if (elemento !== '0' &&
-            elemento !== '1' &&
-            elemento !== '2' &&
-            elemento !== '3' &&
-            elemento !== '4' &&
-            elemento !== '5' &&
-            elemento !== '6' &&
-            elemento !== '7' &&
-            elemento !== '8' &&
-            elemento !== '9'){
-                esNumero = false;
-            }
-        })
-    return esNumero;
+    return cadena.split('').every(caracter => '0123456789'.includes(caracter));
 }
 
 let sonDigitosIguales = function(cadena) {
-    cadena = cadena.split('');
-    let esIgual = true;
-
-    for (let i = 0; i < (cadena.length - 1); i++){ 
-        if (cadena[i] !== cadena[i+1])
-            esIgual = false;
-    }
-    return esIgual;
+    return cadena.split('').every(num => num === cadena[0]);
 }
 
 export {
